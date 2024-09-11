@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import {
   userReducer,
   globalReducer,
+  newsReducer
 } from "./slices";
 
 
@@ -9,7 +10,7 @@ export const store = configureStore({
   reducer: {
     global: globalReducer,
     user: userReducer,
- 
+    news: newsReducer
   },
 });
 

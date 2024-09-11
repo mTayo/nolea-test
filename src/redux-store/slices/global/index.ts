@@ -3,12 +3,14 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 
 // Define a type for the slice state
 export interface GlobalStates {
-  isSignedIn: boolean
+  isSignedIn: boolean,
+  userObject: {username: string},
 }
 
 // Define the initial state using that type
 const initialState: GlobalStates = {
   isSignedIn: false,
+  userObject: {username: ""}
 };
 
 export const globalStateSlice = createSlice({

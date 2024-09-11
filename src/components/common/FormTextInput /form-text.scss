@@ -1,0 +1,18 @@
+.form-text-group{
+    label {
+        font-size: 14px;
+        // color: #6b7280;
+    }
+    .form-input{
+        box-sizing: border-box;
+        outline: none !important;
+        color: black !important;
+    }
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover, 
+    textarea:-webkit-autofill:focus, 
+    textarea:-webkit-autofill:active{
+        -webkit-box-shadow: 0 0 0 30px white inset;
+        -webkit-text-fill-color: black;
+    }
+}

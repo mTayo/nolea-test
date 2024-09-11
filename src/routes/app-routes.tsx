@@ -9,6 +9,7 @@ import HomePageLayout from 'Layouts/HomePageLayout';
 
 const HomePage = Loadable(lazy(() => import("pages/HomePage")));
 const UserList = Loadable(lazy(() => import("pages/Users/Listing")));
+const Dashboard = Loadable(lazy(() => import("pages/Dashboard")));
 
 
 
@@ -21,12 +22,16 @@ export const DashboardRoutes = {
     children: [
         {
             path: '/admin',
-            element: <Navigate to="/admin/user-management" replace />
+            element: <Navigate to="/admin/dashboard" replace />
         },
         {
             path: '/admin/user-management',
             element: <UserList />
-        }
+        },
+        {
+          path: '/admin/dashboard',
+          element: <Dashboard />
+      }
     ]
 };
 
