@@ -7,8 +7,6 @@ import { toast } from "react-toastify";
 import { useAppDispatch, useAppSelector } from "redux-store/hooks";
 import { setIsSiginIn } from "redux-store/slices/global";
 import { setUser } from "redux-store/slices/user";
-import AddNewsModal from "ui-chunks/AddNewsModal";
-import SignInModal from "ui-chunks/SignInModal";
 import { getInitials } from "utils/utils";
 import { sideBarMenuData } from "./sideBarMenuData";
 
@@ -30,15 +28,12 @@ const DashboardLayout = () => {
     const [state, setState]: any = useReducer((state: InitialState, newState: InitialState) => ({ ...state, ...newState }), initialState);
     const {showSignInModal,  showLogOutModal } = state;
 
-    
-
     const toggleSignInModal = () => {
         setState({
             showSignInModal: !showSignInModal
         })
     };
 
-   
     const toggleLogOutModal = () => {
         setState({
             showLogOutModal: !showLogOutModal
