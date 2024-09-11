@@ -35,7 +35,7 @@ export const publishData = {
             },
             y: {
                 title: {
-                    formatter: () => 'Total Responses'
+                    formatter: () => 'Published article'
                 }
             },
             marker: {
